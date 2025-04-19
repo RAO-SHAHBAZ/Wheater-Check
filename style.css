@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6e7bff, #a3b8ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #weatherApp {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  #cityInput {
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 2px solid #6e7bff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 350px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+
+  #cityInput:focus {
+    border-color: #a3b8ff;
+  }
+
+  button {
+    padding: 12px 25px;
+    background-color: #6e7bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 350px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #a3b8ff;
+  }
+
+  #weather {
+    margin-top: 30px;
+    color: #333;
+  }
+
+  #weather h3 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  #weather p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    line-height: 1.5;
+  }
+
+  #weather p strong {
+    font-weight: bold;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+
+  #suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    max-width: 350px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  #suggestions li {
+    padding: 12px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+
+  #suggestions li:hover {
+    background-color: #e2e2e2;
+  }
+
+  /* Current location display */
+  #currentLocation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Responsive Design for Mobile */
+  @media screen and (max-width: 768px) {
+    #weatherApp {
+      padding: 25px;
+      width: 90%;
+      max-width: 350px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    button {
+      max-width: 100%;
+    }
+
+    #suggestions {
+      max-width: 100%;
+    }
+  }
